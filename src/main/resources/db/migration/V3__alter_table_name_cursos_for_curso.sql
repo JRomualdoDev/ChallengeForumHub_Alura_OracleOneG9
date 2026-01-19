@@ -1,0 +1,1 @@
+ALTER TABLE cursos RENAME TO curso;
