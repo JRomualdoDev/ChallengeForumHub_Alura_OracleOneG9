@@ -2,6 +2,7 @@ package br.com.alura.forumhub.domain.usuario;
 
 import br.com.alura.forumhub.domain.perfil.Perfil;
 import br.com.alura.forumhub.domain.resposta.Resposta;
+import br.com.alura.forumhub.domain.topico.StatusTopico;
 import br.com.alura.forumhub.domain.topico.Topico;
 import jakarta.persistence.*;
 import lombok.*;
@@ -77,5 +78,20 @@ public class Usuario implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;
+    }
+
+    public void atualizarInformacoes(String nome, String email, String senha) {
+
+        if (nome != null) {
+            this.nome = nome;
+        }
+
+        if (email != null) {
+            this.email = email;
+        }
+
+        if (senha != null) {
+            this.senha = senha;
+        }
     }
 }
