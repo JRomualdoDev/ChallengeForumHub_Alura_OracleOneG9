@@ -17,15 +17,20 @@ public record TopicoDTO (
     String autor,
     String curso
 ){
-    public TopicoDTO(Topico topico) {
-        this(
-                topico.getTitulo(),
-                topico.getMensagem(),
-                topico.getDataCriacao(),
-                topico.getStatus(),
-                topico.getAutor().getNome(),
-                topico.getCurso().getNome()
-        );
+    public TopicoDTO(
+            String titulo,
+            String mensagem,
+            LocalDateTime dataCriacao,
+            StatusTopico status,
+            String autor,
+            String curso
+    ) {
+        this.titulo = titulo;
+        this.mensagem = mensagem;
+        this.dataCriacao = dataCriacao;
+        this.status = status;
+        this.autor = autor;
+        this.curso = curso;
     }
 
     @JsonIgnore
