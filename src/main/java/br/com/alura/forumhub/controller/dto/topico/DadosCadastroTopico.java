@@ -15,7 +15,7 @@ public record DadosCadastroTopico(
         @NotNull
         String mensagem,
 
-        //TODO: Ver o que fazer com status pq no trello nao fale sobre enviar ele pela requisição
+        @NotNull
         @Enumerated(EnumType.STRING)
         StatusTopico status,
 
