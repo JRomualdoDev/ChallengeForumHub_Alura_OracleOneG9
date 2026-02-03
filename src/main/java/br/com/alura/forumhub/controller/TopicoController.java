@@ -8,7 +8,6 @@ import br.com.alura.forumhub.controller.dto.topico.TopicoDTO;
 import br.com.alura.forumhub.domain.usuario.Usuario;
 import br.com.alura.forumhub.service.topico.TopicoService;
 import jakarta.validation.Valid;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
