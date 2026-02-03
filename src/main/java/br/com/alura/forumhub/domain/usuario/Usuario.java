@@ -37,7 +37,7 @@ public class Usuario implements UserDetails {
     @OneToMany(mappedBy = "autor")
     private Set<Resposta> respostas = new HashSet<>();
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "usuario_perfil",
             joinColumns = @JoinColumn(name = "usuario_id"),
@@ -47,7 +47,8 @@ public class Usuario implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
+
+        return this.perfis;
     }
 
     @Override
